@@ -8,6 +8,10 @@ class DockingStation
     @bikes.any?
   end
 
+  def available_bikes
+    @bikes.reject { |bike| bike.broken? }
+  end
+
   def release_bike
     @bikes.pop unless @bikes.last.broken?
   end

@@ -27,6 +27,8 @@ describe 'DockingStation' do
     expect(station).to have_bikes
   end
 
-  
+  it 'has available bikes' do
+    expect(station.available_bikes).to eq [bike]
+  end
 
 end

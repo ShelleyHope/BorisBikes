@@ -13,7 +13,7 @@ class DockingStation
   end
 
   def release_bike
-    @bikes.pop unless @bikes.last.broken?
+    @bikes.delete(available_bikes.pop)
   end
 
 end
